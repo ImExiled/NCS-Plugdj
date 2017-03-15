@@ -1,6 +1,6 @@
 /***************************************************************************************************/
 /*                                                                                                 */
-/*  This code is Copyright (C) of CSxKING.me 2015-2017 and licenced under MIT     				   */
+/*  This code is Copyright (C) of CSxKING.me 2015-2017 and licenced under MIT                      */
 /*  Do not use this code without leaving the below credit included.                                */
 /*                                                                                                 */
 /***************************************************************************************************/
@@ -244,7 +244,7 @@ var NCSFunct = {
         if (ncsSettings.ncsThemeEnabled === false) {
             $('.ncs-theme-toggle').children('.ncs-menu-icon').show();
             setTimeout(function () {
-                $('head').append('<link id="NCSTheme" rel="stylesheet" href="https://ncscript.gq/ncs/public/NCSTheme.css" type="text/css" />');
+                $('head').append('<link id="NCSTheme" rel="stylesheet" href="https://rawgit.com/bentenz5/NCS-Plugdj/master/NCSTheme.css" type="text/css" />');
                 $('.room-background').css('background-image', 'url(\'https://i.imgur.com/N82wzhY.png\')')
             }, 500);
             ncsSettings.ncsThemeEnabled = true;
@@ -289,8 +289,8 @@ var NCSFunct = {
     },
     
     defaultStyles: function () {
-        $('head').append('<link href="https://ncscript.gq/ncs/public/ncs.css" rel="stylesheet" type="text/css">');
-        $('head').append('<link href="https://ncscript.gq/ncs/public/menu.css" rel="stylesheet" type="text/css">');
+        $('head').append('<link href="https://rawgit.com/bentenz5/NCS-Plugdj/master/ncs.css" rel="stylesheet" type="text/css">');
+        $('head').append('<link href="https://rawgit.com/bentenz5/NCS-Plugdj/master/menu.css" rel="stylesheet" type="text/css">');
     },
     
     nc331Theme: function () {
@@ -300,7 +300,7 @@ var NCSFunct = {
     updateCheck: function () {
         $.ajax({
             type: "GET",
-            url: "https://ncscript.gq/ncs/public/latest.json"
+            url: "https://rawgit.com/bentenz5/NCS-Plugdj/master/latest.json"
         }).done(function (data) {
             if (data.version != version) {
                 // notifLong("NCS has been updated! Refresh your page to get the latest update! | Current Version: " + version + " | New Version: " + data.version + " | <a href='" + data.changelog + "' target='_blank'>Changelog</a>");
@@ -414,76 +414,6 @@ var NCSFunct = {
 
 })();
 
-//Socket
-/*window.ncssockettries = 0;
-function initWebSocket() {
-    if (window.ncssocket)delete window.ncssocket;
-    window.ncssocket = null;
-    try {
-        window.ncssocket = new WebSocket('wss://ncs.fuechschen.org/plug');
-        window.ncssocket.onerror = function () {
-            console.log('[NCS] WebSocket-Connection failed.');
-            window.ncssocket.close();
-            retry();
-        };
-        window.ncssocket.onclose = function () {
-            retry();
-        };
-        window.ncssocket.onopen = function () {
-            window.ncssockettries = 0;
-        };
-        window.ncssocket.onmessage = function (msg) {
-            if (msg.data !== 'h') {
-                try {
-                    var pmsg = JSON.parse(msg.data);
-                    switch (pmsg.t) {
-                        case 'auth':
-                            window.ncssocket.send(JSON.stringify({
-                                t: 'auth',
-                                d: {room: window.location.pathname, user: API.getUser().id}
-                            }));
-                            break;
-                        case 'broadcast':
-                            switch (pmsg.d.t) {
-                                case 'system':
-                                    API.chatlog('[NCS] ' + pmsg.d.m);
-                                    break;
-                                case 'ncs_msg':
-                                    $('#chat-messages').append('<center style=color:#A77DC2 class="cm ncs-greet">' + pmsg.d.m + '</center>');
-                                    break;
-                                default:
-                                    API.chatlog('[NCS] ' + pmsg.d.m);
-                                    break;
-                            }
-                            //if (pmsg.d.a) audioElement.play();
-                            console.log('[NCS] Receiving message from NCS-Staff: ' + pmsg.d.m);
-                            break;
-                        default:
-                            break;
-                    }
-                } catch (e) {
-                    console.log('[NCS] Received invalid JSON');
-                }
-            }
-        };
-    } catch (e) {
-        retry();
-    }
-
-    var ncssockettries = 0;
-
-    function retry() {
-        if (window.ncssocket)window.ncssocket.close();
-        if (ncssockettries > 4) {
-            console.log('[NCS] WebSocket-Connection failed completely.');
-            if (window.ncssocket)delete window.ncssocket;
-        } else {
-            setTimeout(initWebSocket, 10 * 1000);
-            window.ncssockettries = window.ncssockettries + 1;
-        }
-    }
-}*/
-
 API.on(API.ADVANCE, NCSFunct.checkUsers);
 
 var etaAppend = 0;
@@ -519,6 +449,6 @@ setTimeout(function() {
     NCSFunct.defaultStyles();
     NCSFunct.startupMsgs();
     NCSFunct.fixvideo();
-    $('#ncs-menu').append('<span id="ncsusers">0 people using NCS in 0 rooms!</span>');
+    $('#ncs-menu').append('<span id="ncsusers">NAN people using NCS in NAN rooms!</span>');
     NCSFunct.checkUsers();
 }, 2500);
