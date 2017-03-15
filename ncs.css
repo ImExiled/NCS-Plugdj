@@ -1,0 +1,434 @@
+/* --== CREDITS ==--
+CODE CREATED BY CSxKING AND FRIENDS AND IS LICENCED UNDER MIT! YOU MUST LEAVE THIS CREDIT INCLUDED IN THE CODE
+Twitter: https://twitter.com/CSxKING
+*/
+
+.ncs-menu-header {
+    height: 40px !important;
+    line-height: 40px !important;
+    padding-left: 20px !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+}
+
+.ncs-donate-btn:hover {
+    background-color: #e2e600 !important;
+}
+
+.ncs-menu-item:hover {
+    background-color: #242424;
+}
+
+.NCSDeletedMsg {
+    opacity: .5 !important;
+    background-color: #450061 !important;
+}
+
+.NCSHideRequestCount {
+    visibility: hidden !important;
+}
+
+.disabled {
+    background-color: red !important;
+}
+
+.ncs-greet {
+    background: rgba(65, 23, 84, 0.74) !important;
+    padding: 15px !important;
+}
+
+.ncs-err {
+    background: rgba(84, 23, 23, 0.74) !important;
+    padding: 15px !important;
+}
+
+.jspContainer {
+  overflow-x: hidden !important;
+  overflow-y: scroll !important;
+}
+
+#etacount {
+    position: relative;
+    right: 7px;
+    bottom: 40px;
+    font-size: 8px;
+}
+
+.voteVO {
+    position: absolute;
+    width: 58% !important;
+    left:230px !important;
+}
+
+.wootVO {
+    width: 206.5px !important
+}
+
+.grabVO {
+    width: 206.5px !important
+}
+
+.mehVO {
+    width: 206.5px !important
+}
+
+a {
+  color: #5CBE59;
+  text-decoration: none;
+}
+
+.cm.ncs-greet {
+  background-color: #2D2435;
+}
+
+.cm.ncs-broadcast {
+  background-color: #2B320A;
+}
+
+.items>a {
+    text-decoration: none;
+}
+
+.disabled {
+    background-color: #0f0f0f !important;
+    border-color: #0f0f0f !important;
+    pointer-events: none;
+    cursor: default;
+}
+
+#loli-counter.hidden { 
+    display: block; 
+    pointer-events:none; 
+    opacity: 0;
+}
+#loli-counter { 
+    position: absolute; 
+    left: 5px; 
+    top: 50px; 
+    margin: 15px; 
+    padding: 5px; 
+    background: rgba(0,0,0,0.6); 
+    font-size: 24px;  
+    font-family: arial, sans-serif; 
+    border: 2px lightblue; 
+    border-style: solid; 
+    opacity: .3; 
+    z-index: 50;
+    transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -webkit-transition: opacity .2s ease-in-out;
+}
+#loli-counter:hover { 
+    opacity: 1; 
+    transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -webkit-transition: opacity .2s ease-in-out;
+}
+
+#ncs-app-right {
+    position: absolute;
+    right: 0;
+    background: rgba(10,10,10,0.9);
+    width: 400px;
+    height: calc(100% - 40px);
+    top: 0;
+    z-index: 11;
+}
+.notif {
+    z-index: 11;
+    height: 380px;
+    width: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #444A59;
+    display:none;
+}
+.notif-title {
+    height: 45px;
+    width: 100%;
+    background: #0E0E10;
+    line-height: 46px;
+}
+.notif-content {
+    background: #1C1C1F;
+    width: 100%;
+    height: calc(100% - 90px);
+}
+.notif-confirm {
+    position: absolute;
+    bottom: 0;
+    height: 45px;
+    width: 100%;
+    background: #1C1C1F;
+}
+.ncs-confirm {
+    font-weight: bold;
+    width: 50%;
+    height: 100%;
+    float: left;
+    font-size: 16px;
+    line-height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #0E0E10;
+}
+.confirm-no {
+    color: #C8303E;
+}
+.confirm-yes {
+    color: #A7CA00;
+}
+.ncs-confirm:hover {
+    background: rgba(146,90,255,.25);
+    box-shadow: inset 4px 4px 3px 0px rgba(0,0,0,0.75);
+}
+.show-notif {
+    display:block !important;
+}
+#notifications {
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: none;
+    z-index: 20;
+}
+
+/* When hidden */
+#ncs-back.hidden .item {
+  opacity: 0;
+}
+
+/* This items in general, when not hovered or selected... */
+#ncs-back .item {
+     transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -webkit-transition: opacity .2s ease-in-out;
+}
+
+/* This items in the NCS menu on hover. When an item is hovered, this will happen */
+#ncs-back .item:hover {
+    opacity: 1;
+     transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -webkit-transition: opacity .2s ease-in-out;
+}
+
+
+
+/* Styling(?) */
+
+#ncs-back {
+    height: 100%;
+    animation: fadein 0.25s;
+    box-shadow: inset -176px 17px 291px -88px rgba(0,0,0,0.75);
+    overflow: auto;
+}
+
+#ncs-back .items {
+    display: flex;
+    flex-direction: column;
+    position:relative;
+}
+
+#ncs-back .item {
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 8px;
+    line-height: 24px;
+    font-size: 14px;
+    padding-left: 41px;
+    color: #989898;
+    -webkit-transition: background .2s;
+    -moz-transition: background .2s;
+    -o-transition: background .2s;
+    transition: background .2s;
+}
+
+#ncs-back .item:nth-child(even) {
+
+}
+
+#ncs-back .item:hover {
+}
+
+#ncs-back .item .mdi {
+    display: none;
+    float: right;
+    color: deepskyblue;
+    left: 10px;
+    position: absolute;
+}
+
+#ncs-back .item.active .mdi {
+    display: inline;
+}
+
+#NCSIssues {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* This also destroys the frienslist header
+.header {
+    border-bottom: 1px solid #3C3C3C;
+    border-top: 1px solid #3C3C3C;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 40px;
+    font-size: 18px;
+}
+*/
+
+#header-settings {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.mdi-pencil {
+    display: inline !important;
+    color: white !important;
+    font-size: 21px;
+}
+.mdi-puzzle {
+    display: inline !important;
+    color: white !important;
+    line-height: 34px;
+    float: right;
+    left: 10px;
+    position: absolute;
+}
+.notif-title-text {
+    font-size: 18px;
+    padding-left: 45px;
+    display: inline;
+}
+
+.notif-mdi {
+    left: 10px;
+    position: absolute;
+    line-height: 1.8;
+    font-size: 26px;
+}
+#notif-afk-message {
+    height: 172px;
+    width: 550px;
+}
+input#afk-response {
+    border: 1px solid white;
+    margin: 20px;
+    width: 488px;
+    border: 1px solid #949598;
+}
+
+input#background-input {
+    border: 1px solid white;
+    margin: 20px;
+    width: 488px;
+    border: 1px solid #949598;
+}
+
+.btn-join::after {
+    content: attr(data-eta); 
+    display:inline; 
+    font-size:12px; 
+}
+#notif-background {
+    height: 172px;
+    width: 550px;
+}
+#newbg {
+    z-index: -5;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.ncs-dev {
+    background: url("http://i.imgur.com/uerI4EX.png") !important;
+}
+.ncs-chat-bdg {
+    height: 16px;
+    width: 16px;
+    float: left;
+    margin-right: 5px;
+    margin-left: 4px;
+}
+
+.ncscm{
+    padding: 6px 10px;
+    animation: fadein 0.25s;
+    word-wrap: break-word;
+}
+
+#countDownFrame {
+    position: relative !important;
+    bottom: 18px !important;
+}
+
+.NCSBtnHover {
+    color: #925AFF;
+}
+.NCSBtnHover:hover {
+    background: rgba(146, 90, 255, .25);
+}
+
+/* NCS Menu's User Count */
+#ncsusers {
+    font-style: italic;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    color: #2d2a2a;
+}
+
+#NCSDlBtn > .top {
+    top: 9px;
+}
+
+#etacount {
+    font-style: italic;
+    font-size: 14px !important;
+    top: 10px;
+}
+
+#dj-button > span:not(#etacount) {
+    position: absolute;
+  bottom: 25px;
+}
+
+#NCSDlBtn {
+    border-radius: 0px 4px 4px 0px !important;
+}
+
+#NCSDlBtn > div.bottom {
+    border-radius: 0px 0px 4px 0px !important;
+}
+
+#NCSDlBtn > div.bottom:hover {
+    border-radius: 0px 0px 5px 0px !important;
+}
+
+#meh {
+    border-radius: 0px !important;
+}
+
+#meh > div.bottom {
+  border-radius: 0px 0px 0px 0px !important;
+}

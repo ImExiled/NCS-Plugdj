@@ -1,0 +1,94 @@
+/* --== CREDITS ==--
+CODE CREATED BY CSxKING AND FRIENDS AND IS LICENCED UNDER MIT! YOU MUST LEAVE THIS CREDIT INCLUDED IN THE CODE
+Twitter: https://twitter.com/CSxKING
+*/
+
+/* Putting this here because I accidently deleted it last time. :\ */
+.ncs-menu-header {
+    height: 40px !important;
+    line-height: 40px !important;
+    padding-left: 20px !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+}
+
+.mdi-puzzle {
+    display: inline !important;
+    color: white !important;
+    line-height: 34px;
+    float: right;
+    left: 10px;
+    position: absolute;
+}
+
+#chat-button{
+    left:0px !important;
+    width:50px !important;
+}
+
+#users-button{
+    left:50px !important;
+    width:85px !important;
+}
+
+#waitlist-button{
+    left:135px !important;
+    width:100px;
+}
+
+#friends-button{
+    left:236px !important;
+    width: 50px !important;
+}
+
+#ncs-menu-button{
+    left:287px !important;
+    width:58px !important;
+}
+
+.ncs-menu-button-info{
+    top:18px;
+    position: relative;
+}
+
+#ncs-menu .header {
+    top:0;
+    left:0;
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+
+#ncs-menu .header .title {
+    position: relative;
+    top: 11px;
+    margin-left: 17px;
+    font-size: 18px;
+}
+
+.ncs-menu-item{
+    cursor:pointer !important;
+    width:100%;
+    height:30px;
+    position: relative;
+}
+
+.ncs-menu-icon{
+    top:7px;
+    left:12px;
+    display: none;
+}
+
+
+.ncs-menu-span{
+    left:35px !important;
+    top:5px;
+    position:relative;
+}
+
+.ncs-item:hover {
+    opacity: 1;
+     transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -webkit-transition: opacity .2s ease-in-out;
+}
