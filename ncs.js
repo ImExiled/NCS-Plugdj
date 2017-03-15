@@ -1,9 +1,15 @@
 /***************************************************************************************************/
 /*                                                                                                 */
-/*  This code is Copyright (C) of CSxKING.me 2015-2017 and licenced under MIT     					       */
+/*  This code is Copyright (C) of CSxKING.me 2015-2017 and licenced under MIT     				   */
 /*  Do not use this code without leaving the below credit included.                                */
 /*                                                                                                 */
 /***************************************************************************************************/
+
+/*
+    This extension was made by CSxKING and his friends. Find CSxKING at the links below:
+    https://twitter.com/CSxKING
+    https://twitch.tv/CSxKING
+*/
 
 // NOTE: Some things we're removed to keep the code secure and such as it was not mine.
 
